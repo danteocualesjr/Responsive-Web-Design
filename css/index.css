@@ -53,6 +53,7 @@ table {
 }
 
 html, body {
+    font-size: 62.5%;
     height: 100%;
     font-family: 'Titillium Web', sans-serif;
 }
@@ -60,10 +61,11 @@ html, body {
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .container {
+    font-size: 1.6rem;
     width: 880px;
     margin: auto;
 }
@@ -106,7 +108,7 @@ header .logo {
 }
 
 .cta .cta-text {
-    font-size: 72px;
+    font-size: 7.2rem;
     text-align: center;
     letter-spacing: 5px;
     display: flex;
@@ -118,7 +120,7 @@ header .logo {
 
 .cta .cta-text button {
     border: 1px double black;
-    font-size: 16px;
+    font-size: 1.6rem;
     background: white;
     width: 170px;
     height: 32px;
@@ -138,7 +140,7 @@ header .logo {
    border-bottom: 2px solid black;
    margin: 75px 0 35px 0;
    padding: 35px 0;
-   font-size: 16px;
+   font-size: 1.6rem;
    line-height: 18px;
 }
 
@@ -174,68 +176,126 @@ footer {
     margin: 40px 0 20px;
 }
 
-/* At the point of 768px, break into tablet view. */
+/* Tablet */
+@media (max-width: 768px) {
 
-@media(max-width: 768px) {
+    .container {
+        max-width: 768px;
+        width: 100%;
+    }
 
-/* container */
+    header {
+        flex-wrap: wrap;
+    }
+  
+    header nav {
+        width: 100%;
+        padding: 0 3.9%;
+    }
+
+    header .logo {
+        order: -1;
+        display: block;
+        margin: 3.9% auto 0;
+    }
+
+    .cta {
+        justify-content: center;
+    }
     
-  .container {
-    width: 880px;
-    width: 100%;
-    margin: 0 auto;
-  }
+    .cta .cta-text {
+        margin: 0;
+    }
 
-/* header */
+    .cta img {
+        display: none;
+    }
 
-  header {
-      display: flex;
-      width: 100%;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap-reverse;
-  }
+    .main-content .middle-img {
+       width: 100%;
+    }
 
-  nav {
-    border: 1px solid red;
-    margin: 20px;
-    border: 1px solid red;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-  }
+    .main-content {
+       margin: 9.7% 2.6% 4.5%;
+    }
 
-  nav a {
-    border: 1px solid red;
-    display: flex;
-    margin-top: 50px;
-  }
+    .text-content {
+        margin: 0 1.3%;
+    }
 
-  .logo {
-    justify-content: center;
-    border: 1px solid red;
-  }
+    .contact {
+        margin: 0 3.9%;
+    }
+}
 
-/* cta */
+/* Phone */
+@media (max-width: 400px) {
 
-  .cta {
-    border: 1px solid red;
-  }
+    .container {
+        max-width: 400px;
+        width: 100%;
+    }
 
-  .cta-text h1 {
-    border: 1px solid red;
-    margin-left: -100px;
-  } 
+    header {
+        justify-content: center;
+    }
 
-  .cta-text button {
-    border: 1px solid red;
-    margin-left: 300px;
-  }
+    header nav {
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
 
-  .cta img {
-    border: 1px solid red;
-    display: none;
-  }
-    
+    header nav a {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 5% 0;
+        font-size: 2rem;
+        border-bottom: 1px solid gray;
+    }
+
+    header nav a:first-child {
+        border-top: 1px solid gray;
+    }
+
+    header nav a:hover {
+        background: gray;
+    }
+
+    header .logo {
+        margin: 5% 0;
+    }
+
+    .cta {
+        margin-top: 12.5%;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .cta img {
+        max-width: 80%;
+    }
+
+    .main-content .top-content {
+        justify-content: space-around;
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .main-content .bottom-content {
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 440px;
+    }
+
+    .text-content {
+        margin: 0;
+    }
+
+    .contact {
+        font-size: 1.2rem;
+        margin: 5%;
+    }
 }
